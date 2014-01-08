@@ -1,14 +1,16 @@
  package prateekj.unixtools.wc;
+ import prateekj.fs.FileOperations;
  public class WC{
      public static void main(String[] args) {
          Operations op;
          op = new Operations();
          Options options = op.getOptions(args);
+         FileOperations fo = new FileOperations();
          String data;
          int totalLine;
          int totalWords;
          int totalChars;
-         data = op.readFile(options.filename);
+         data = fo.readFile(options.filename);
          if(options.lines){
             totalLine = op.countLine(data);
             System.out.print(totalLine + "    ");
