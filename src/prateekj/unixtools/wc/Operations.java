@@ -10,15 +10,15 @@ class Options {
 public class Operations{
     Options getOptions(String[] temp){
         Options options = new Options();
-        for (int i = 0 ; i < temp.length ; i++){
-            if(temp[i].equalsIgnoreCase("-c"))
+        for (String i : temp){
+            if(i.equalsIgnoreCase("-c"))
                 options.chars = true;
-            if(temp[i].equalsIgnoreCase("-l"))
+            if(i.equalsIgnoreCase("-l"))
                 options.lines = true;
-            if(temp[i].equalsIgnoreCase("-w"))
+            if(i.equalsIgnoreCase("-w"))
                 options.words = true;
-            if(!temp[i].substring(0,1).startsWith("-"))
-                options.filename = temp[i];
+            if(!i.substring(0, 1).startsWith("-"))
+                options.filename = i;
         }
         return options;
     }
