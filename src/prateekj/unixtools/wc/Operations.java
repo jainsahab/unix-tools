@@ -28,9 +28,9 @@ public class Operations{
 	}
 	int countWords(String data){
 		int count = 0;
-		for (int i = 0; i<data.split("\n").length; i++) {
-			count += data.split("\n")[i].split(" ").length;
-		}
+        String[] temp = data.split("\n");
+		for (String i : temp)
+            count += i.split(" ").length;
 		return count;
 	}
 	int countCharacters(String data){

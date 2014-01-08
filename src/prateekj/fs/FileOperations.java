@@ -6,9 +6,9 @@ public class FileOperations {
     public void writeFile(String fileName,String content){
         try {
             PrintWriter writer = new PrintWriter(fileName, "UTF-8");
-            for(int i = 0 ; i < content.split("\n").length ; i++){
-                writer.println(content.split("\n")[i]);
-            }
+            String[]  temp = content.split("\n");
+            for(String line : temp)
+                writer.println(line);
             writer.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
