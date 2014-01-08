@@ -4,7 +4,12 @@
     <bookmark url="file://$PROJECT_DIR$/src/prateekj/unixtools/wc/WC.java" description="op = new Operations();" line="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81394eb0-a77e-4a3a-88c3-766c15d2581a" name="Default" comment="" />
+    <list default="true" id="81394eb0-a77e-4a3a-88c3-766c15d2581a" name="Default" comment="WC t">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test/prateekj/unixtools/wc/OperationsTest.java" afterPath="$PROJECT_DIR$/Test/prateekj/unixtools/wc/OperationsTest.java" />
+      <change type="MODIFICATION" beforePath="D:\projects\unix-tools\UnixTools.iml" afterPath="D:\projects\unix-tools\UnixTools.iml" />
+      <change type="MODIFICATION" beforePath="D:\projects\unix-tools\.idea\vcs.xml" afterPath="D:\projects\unix-tools\.idea\vcs.xml" />
+      <change type="MODIFICATION" beforePath="D:\projects\unix-tools\.idea\workspace.xml" afterPath="D:\projects\unix-tools\.idea\workspace.xml" />
+    </list>
     <ignored path="UnixTools.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,10 +72,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="WC.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="WC.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/prateekj/unixtools/wc/WC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="24" selection-start="295" selection-end="295" vertical-scroll-proportion="0.24401914" vertical-offset="0" max-vertical-offset="627">
+            <state line="9" column="24" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="837">
               <folding />
             </state>
           </provider>
@@ -79,8 +84,19 @@
       <file leaf-file-name="Operations.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/prateekj/unixtools/wc/Operations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
+            <state line="14" column="0" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1593">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OperationsTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Test/prateekj/unixtools/wc/OperationsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="0" selection-start="132" selection-end="132" vertical-scroll-proportion="0.3009554" vertical-offset="0" max-vertical-offset="1809">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,6 +108,9 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -101,6 +120,8 @@
         <option value="$PROJECT_DIR$/src/prateekj/unixtools/WC.java" />
         <option value="$PROJECT_DIR$/src/prateekj/unixtools/wc/Operations.java" />
         <option value="$PROJECT_DIR$/src/prateekj/unixtools/wc/WC.java" />
+        <option value="$PROJECT_DIR$/src/prateekj/unixtools/wc/OperationsTest.java" />
+        <option value="$PROJECT_DIR$/Test/prateekj/unixtools/wc/OperationsTest.java" />
       </list>
     </option>
   </component>
@@ -113,7 +134,42 @@
     <option name="width" value="1930" />
     <option name="height" value="1148" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Class metrics</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>JavaBeans issues</id>
+          </State>
+          <State>
+            <id>Logging issues</id>
+          </State>
+          <State>
+            <id>Performance issues</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsGroovy</id>
+          </State>
+          <State>
+            <id>Threading issues</id>
+          </State>
+          <State>
+            <id>toString() issues</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -139,6 +195,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -167,14 +225,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UnixTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unix-tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -188,14 +266,26 @@
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
+    <property name="options.lastSelected" value="Errors" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="prateekj.unixtools.wc" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\projects\unix-tools\src\prateekj\unixtools\wc" />
       <recent name="D:\projects\unix-tools\src\prateekj\unixtools" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WC">
+  <component name="RunManager" selected="JUnit.OperationsTest">
     <configuration default="false" name="wcClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="prateekj.unixtools.wcClient" />
       <option name="VM_PARAMETERS" value="" />
@@ -256,6 +346,28 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="OperationsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UnixTools" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="prateekj.unixtools.wc" />
+      <option name="MAIN_CLASS_NAME" value="prateekj.unixtools.wc.OperationsTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -290,6 +402,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -315,19 +440,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -383,16 +495,18 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.wcClient" />
       <item index="1" class="java.lang.String" itemvalue="Application.wc" />
       <item index="2" class="java.lang.String" itemvalue="Application.WC" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.OperationsTest" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.WC" />
-        <item index="1" class="java.lang.String" itemvalue="Application.wc" />
-        <item index="2" class="java.lang.String" itemvalue="Application.wcClient" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.OperationsTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.WC" />
+        <item index="2" class="java.lang.String" itemvalue="Application.wc" />
+        <item index="3" class="java.lang.String" itemvalue="Application.wcClient" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -424,6 +538,15 @@
       <created>1389096532079</created>
       <updated>1389096532079</updated>
     </task>
+    <task id="LOCAL-00001" summary="Test started to make input object">
+      <created>1389171097719</created>
+      <updated>1389171097719</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Count Lines completed">
+      <created>1389171917647</created>
+      <updated>1389171917647</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -447,7 +570,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18643162" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32858595" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -467,6 +590,9 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Test started to make input object" />
+    <MESSAGE value="Count Lines completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Count Lines completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -476,6 +602,20 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/prateekj/unixtools/wc/WC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="24" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="837">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prateekj/unixtools/wc/Operations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1593">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/prateekj/unixtools/wc/WC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="45" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="527">
@@ -523,17 +663,26 @@
         <state line="10" column="17" selection-start="210" selection-end="210" vertical-scroll-proportion="0.24401914" vertical-offset="0" max-vertical-offset="627" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prateekj/unixtools/wc/Operations.java">
+    <entry file="file://$PROJECT_DIR$/src/prateekj/unixtools/wc/WC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1239">
+        <state line="9" column="24" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="837">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/prateekj/unixtools/wc/WC.java">
+    <entry file="file://$PROJECT_DIR$/src/prateekj/unixtools/wc/Operations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="24" selection-start="295" selection-end="295" vertical-scroll-proportion="0.24401914" vertical-offset="0" max-vertical-offset="627">
+        <state line="14" column="0" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1593">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/prateekj/unixtools/wc/OperationsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="132" selection-end="132" vertical-scroll-proportion="0.3009554" vertical-offset="0" max-vertical-offset="1809">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

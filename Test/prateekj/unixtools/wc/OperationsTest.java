@@ -5,10 +5,6 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class OperationsTest {
-    @Test
-    public void testReadFile() throws Exception {
-
-    }
 
     @Test
     public void testGetOptions() throws Exception {
@@ -41,11 +37,25 @@ public class OperationsTest {
 
     @Test
     public void testCountWords() throws Exception {
+        int expected = 6 ;
+        int actual;
+        String temp = "My Name is Prateek Jain\nI";
 
+        Operations op = new Operations();
+        actual = op.countWords(temp);
+
+        assertEquals(expected,actual);
     }
 
     @Test
     public void testCountCharacters() throws Exception {
+        int expected = 7 ;
+        int actual;
+        String temp = "My Name";
 
+        Operations op = new Operations();
+        actual = op.countCharacters(temp);
+
+        assertEquals(expected,actual);
     }
 }
