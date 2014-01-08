@@ -29,7 +29,14 @@ public class OperationsTest {
 
     @Test
     public void testCountLine() throws Exception {
+        int expected = 2;
+        int actual;
+        String temp = "My Name is Prateek Jain\n Hello, ik's mike testing";
 
+        Operations op = new Operations();
+        actual = op.countLine(temp);
+
+        assertEquals(actual, expected);
     }
 
     @Test
