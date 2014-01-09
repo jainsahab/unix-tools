@@ -4,8 +4,8 @@ class Operations {
     int lineNo;
     String fileName;
 }
-class OperationsOfHead {
-    Operations getOptions(String[] temp){
+ class OperationsOfHead {
+      Operations getOptions(String[] temp){
         Operations op = new Operations();
         if(temp.length == 1){
             op.fileName = temp[0];
@@ -21,7 +21,7 @@ class OperationsOfHead {
         return op;
     }
 
-    void printSpecifiedLine(String content,int limit){
+     void printSpecifiedLine(String content,int limit){
         String[] temp = content.split("\n");
         for (int i = 0 ; i < limit ; i++){
             System.out.println(temp[i]);
