@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class CutOperationsTest {
     @Test
-    public void testGetInfo() throws Exception {
+    public void get_input_without_providing_delimiter() throws Exception {
         String[] input = {"temp.txt","-f2"};
         OperationInfo expected = new OperationInfo();
         expected.fieldNo = 2;
@@ -24,12 +24,12 @@ public class CutOperationsTest {
     }
 
     @Test
-    public void testGetInfo2() throws Exception {
-        String[] input = {"temp.txt","-f2","-d,"};
+    public void get_input_with_providing_delimiter() throws Exception {
+        String[] input = {"temp.txt","-f2","-d' '"};
         OperationInfo expected = new OperationInfo();
         expected.fieldNo = 2;
         expected.fileName = "temp.txt";
-        expected.delimiter = ",";
+        expected.delimiter = " ";
         CutOperations op = new CutOperations();
 
         OperationInfo actual = op.getInfo(input);
