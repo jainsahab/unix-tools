@@ -6,6 +6,6 @@ public class sort {
         SortOperation so = new SortOperation();
         Options input = so.getOptions(args);
         String content = new FileOperations().readFile(input.fileName);
-        so.sortContent(content,input);
+        System.out.println(so.sortContent(content, input));
     }
 }
