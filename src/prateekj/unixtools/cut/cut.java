@@ -6,6 +6,6 @@ public class cut {
         CutOperations operations = new CutOperations();
         OperationInfo op = operations.getInfo(args);
         String content = new FileOperations().readFile(op.fileName);
-        operations.printSpecifiedFields(content, op);
+        System.out.println(operations.printSpecifiedFields(content, op));
     }
 }

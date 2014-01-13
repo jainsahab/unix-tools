@@ -1,11 +1,13 @@
 package prateekj.unixtools.cut;
 
+import java.util.ArrayList;
+
 /**
  * Created by prateekj on 1/10/14.
  */
 
 class OperationInfo {
-    int fieldNo;
+    ArrayList<Integer> fieldNos = new ArrayList<Integer>();
     String delimiter = ",";
     String fileName;
 }
@@ -14,8 +16,13 @@ public class CutOperations {
     OperationInfo getInfo(String[] temp){
         OperationInfo op = new OperationInfo();
             for (String s : temp) {
-                if(s.startsWith("-f"))
-                    op.fieldNo = Integer.parseInt(s.substring(2));
+                if(s.startsWith("-f")){
+                    String[] fields = s.substring(2).split(",");
+                    for (String field : fields) {
+                        op.fieldNos.add(Integer.parseInt(field));
+                    }
+                }
+
                 else if(s.startsWith("-d")){
                     op.delimiter = s.substring(3,s.length()-1);
                 }
@@ -25,15 +32,18 @@ public class CutOperations {
 
             return op;
     }
-    void printSpecifiedFields(String content,OperationInfo op){
-        int fieldNo = op.fieldNo - 1;
-        String[] temp = content.split("\n");
-        for (String s : temp) {
+    String printSpecifiedFields(String content, OperationInfo op){
+        String[] lines = content.split("\n");
+        StringBuilder result = new StringBuilder();
+        for (String line : lines) {
             try{
-                System.out.println(s.split(op.delimiter)[fieldNo]);
+                for (int field : op.fieldNos)
+                    result.append(line.split(op.delimiter)[field - 1]).append(" ");
             }catch (ArrayIndexOutOfBoundsException ex){
-                System.out.println(s.split(op.delimiter)[0]);
+                result.append(" ");
             }
+            result.append("\n");
         }
+        return result.toString();
     }
 }
