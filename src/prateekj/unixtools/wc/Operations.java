@@ -10,6 +10,11 @@ class Options {
 public class Operations{
     Options getOptions(String[] temp){
         Options options = new Options();
+        if(temp.length == 1){
+            options.lines = options.chars = options.words =true;
+            options.filename = temp[0];
+            return options;
+        }
         for (String i : temp){
             if(i.equalsIgnoreCase("-c"))
                 options.chars = true;

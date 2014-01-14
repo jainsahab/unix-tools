@@ -19,11 +19,12 @@ public class FileOperations {
 
 
     public String readFile(String fileName){
-        String line = null,data="";
+        String line = null;
+        StringBuilder data = new StringBuilder();
         try{
             BufferedReader reader = new BufferedReader(new FileReader(fileName));
             while ((line = reader.readLine()) != null) {
-                data += line+"\n";
+                data.append(line).append("\n");
             }
         }
         catch(Exception e){
