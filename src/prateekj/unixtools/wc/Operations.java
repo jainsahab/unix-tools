@@ -29,7 +29,7 @@ public class Operations{
     }
 
 	int countLine(String data){
-		return data.split("\n").length;
+		return data.split("\n").length-1;
 	}
 	int countWords(String data){
 		int count = 0;
@@ -39,6 +39,6 @@ public class Operations{
 		return count;
 	}
 	int countCharacters(String data){
-		return data.length();
+		return data.length()+countLine(data);
 	}
 }

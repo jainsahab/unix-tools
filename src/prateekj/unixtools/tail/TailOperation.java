@@ -21,10 +21,14 @@ public class TailOperation {
         return op;
     }
 
-    void printSpecifiedLine(String content,int limit){
+    String getLines(String content,int limit){
         String[] temp = content.split("\n");
+        if(temp.length < limit)
+            limit = temp.length;
+        StringBuilder result = new StringBuilder();
         for (int i = temp.length-limit ; i < temp.length ; i++){
-            System.out.println(temp[i]);
+            result.append(temp[i]).append("\n");
         }
+        return result.toString().substring(0,result.length()-1);
     }
 }

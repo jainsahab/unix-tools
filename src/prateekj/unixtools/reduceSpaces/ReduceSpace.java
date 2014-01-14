@@ -7,11 +7,12 @@ public class ReduceSpace {
     }
 
     public static void main(String[] args) {
-        String fileName = args[0];
+        String source = args[0];
+        String destination = args[1];
         ReduceSpace r = new ReduceSpace();
         FileOperations fo = new FileOperations();
-        String fileData = fo.readFile(fileName);
+        String fileData = fo.readFile(source);
         fileData = r.reducer(fileData);
-        fo.writeFile(fileName,fileData);
+        fo.writeFile(destination,fileData);
     }
 }

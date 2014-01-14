@@ -34,4 +34,37 @@ public class TailOperationTest {
         assertEquals(actual.fileName, expected.fileName);
         assertEquals(expected.lineNo,actual.lineNo);
     }
+
+    @Test
+    public void get_last_ten_lines() throws Exception {
+        String temp = "A\nB\nC\nD\nE\nF\nG\nH\nI\nJ\nK";
+        String expected = "B\n" +
+                "C\n" +
+                "D\n" +
+                "E\n" +
+                "F\n" +
+                "G\n" +
+                "H\n" +
+                "I\n" +
+                "J\n" +
+                "K";
+        TailOperation op = new TailOperation();
+
+        String actual = op.getLines(temp,10);
+        assertEquals(actual,expected);
+    }
+
+    @Test
+    public void get_last_five_lines() throws Exception {
+        String temp = "A\nB\nC\nD\nE\nF\nG\nH\nI\nJ\nK";
+        String expected = "G\n" +
+                "H\n" +
+                "I\n" +
+                "J\n" +
+                "K";
+        TailOperation op = new TailOperation();
+
+        String actual = op.getLines(temp,5);
+        assertEquals(actual,expected);
+    }
 }
