@@ -82,4 +82,7 @@ UNIX TOOLS
 > **pjcut.sh Possible Syntax:**
 >
 > - `pjcut.sh abc.txt -f2`  : It will give you **second column** of file `abc.txt` cutted by default delimiter.
-> - `pjcut.sh abc.txt -f2 -d','`  : It will give you **second column** for file `abc.txt` cutted by delimiter ','.
+> - `pjcut.sh abc.txt -f2 -d','`  : It will give you **second column** for file `abc.txt` cutted by delimiter ','
+
+## How to Run Project
+> `declare -x UNIX_HOME=$PWD`
