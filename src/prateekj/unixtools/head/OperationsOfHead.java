@@ -21,10 +21,14 @@ class Operations {
         return op;
     }
 
-     void printSpecifiedLine(String content,int limit){
+     String printSpecifiedLine(String content,int limit){
+        StringBuilder result = new StringBuilder();
         String[] temp = content.split("\n");
+         if(temp.length < limit)
+             limit = temp.length;
         for (int i = 0 ; i < limit ; i++){
-            System.out.println(temp[i]);
+            result.append(temp[i]).append("\n");
         }
+        return result.toString().substring(0,result.length()-1);
     }
 }

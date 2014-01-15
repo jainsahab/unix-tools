@@ -2,13 +2,10 @@ package prateekj.unixtools.cut;
 
 import java.util.ArrayList;
 
-/**
- * Created by prateekj on 1/10/14.
- */
 
 class OperationInfo {
     ArrayList<Integer> fieldNos = new ArrayList<Integer>();
-    String delimiter = ",";
+    String delimiter = " ";
     String fileName;
 }
 
@@ -24,7 +21,9 @@ public class CutOperations {
                 }
 
                 else if(s.startsWith("-d")){
-                    op.delimiter = s.substring(3,s.length()-1);
+                    op.delimiter = s.substring(2);
+                    if(op.delimiter.equals(""))
+                        op.delimiter = " ";
                 }
                 else
                     op.fileName = s;

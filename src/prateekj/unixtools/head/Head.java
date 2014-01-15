@@ -7,6 +7,6 @@ public class Head {
         FileOperations fs = new FileOperations();
         Operations action = op.getOptions(args);
         String content = fs.readFile(action.fileName);
-        op.printSpecifiedLine(content,action.lineNo);
+        System.out.println(op.printSpecifiedLine(content, action.lineNo));
     }
 }
