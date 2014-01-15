@@ -1,1 +1,1 @@
-java -cp ../out/artifacts/UnixTools_jar/UnixTools.jar prateekj.unixtools.tail.Tail $@
+java -cp $UNIX_HOME/UnixTools.jar prateekj.unixtools.tail.Tail $@

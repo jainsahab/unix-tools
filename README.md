@@ -72,7 +72,7 @@ UNIX TOOLS
 > - `pjReduceSpace.sh abc.txt result.txt`  : It will `replace` all multiple space of file `abc.txt` and store it in `result.txt`.
 
 ### pjcut.sh `(cut fields from file content)`
-* **pjcut.sh ** is used to `cut` the columns of file content based on delimiter and field No.
+* **pjcut.sh** is used to `cut` the columns of file content based on delimiter and field No.
 
 > **pjcut.sh Flags Options:**
 >

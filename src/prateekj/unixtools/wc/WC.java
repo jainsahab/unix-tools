@@ -5,6 +5,10 @@
          Operations op;
          op = new Operations();
          Options options = op.getOptions(args);
+         if(options.filename == null){
+             System.out.println("File not Found");
+             return;
+         }
          FileOperations fo = new FileOperations();
          String data;
          int totalLine;

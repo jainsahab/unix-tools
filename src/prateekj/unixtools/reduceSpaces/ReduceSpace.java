@@ -7,6 +7,14 @@ public class ReduceSpace {
     }
 
     public static void main(String[] args) {
+        if(args.length==0){
+            System.out.println("File not Found");
+            return;
+        }
+        if(args.length == 1 ){
+            System.out.println("Destination file not Found");
+            return;
+        }
         String source = args[0];
         String destination = args[1];
         ReduceSpace r = new ReduceSpace();

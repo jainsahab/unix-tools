@@ -6,6 +6,10 @@ public class Head {
     OperationsOfHead op = new OperationsOfHead();
         FileOperations fs = new FileOperations();
         Operations action = op.getOptions(args);
+        if(action.fileName == null){
+            System.out.println("File not Found");
+            return;
+        }
         String content = fs.readFile(action.fileName);
         System.out.println(op.printSpecifiedLine(content, action.lineNo));
     }
