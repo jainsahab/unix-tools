@@ -1,5 +1,34 @@
-<project>
-    <target name="compile">
+<project default="createZip">
+    <target name="delete">
+            <delete dir="classes"/>
+    </target>
 
+    <target name="compile">
+        <mkdir dir="classes"/>
+        <javac srcdir="src" destdir="classes" includeantruntime="false"/>
+    </target>
+
+    <target name="createJar" depends="compile">
+        <mkdir dir="unix-tools"/>
+        <mkdir dir="unix-tools/lib"/>
+        <jar destfile="unix-tools/lib/unix-tools.jar" basedir="classes"/>
+    </target>
+
+    <target name="createDocumentation">
+        <mkdir dir="unix-tools"/>
+        <mkdir dir="unix-tools/docs"/>
+        <javadoc packageNames="prateekj.unixtools.*"
+                 sourcepath="src" destdir="unix-tools/docs" windowtitle="UNIX TOOLS API"/>
+    </target>
+
+    <target name="createZip" depends="createJar,createDocumentation">
+        <mkdir dir="unix-tools/bin"/>
+        <copy todir="unix-tools/bin">
+            <fileset dir="Shells" excludes="Shells/*.sh"/>
+        </copy>
+        <copy todir="unix-tools" file="README.md"/>
+        <zip destfile="unix-tools.zip" basedir="unix-tools"/>
+        <delete dir="classes"/>
+        <delete dir="unix-tools"/>
     </target>
 </project>
