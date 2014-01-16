@@ -21,7 +21,7 @@ class Operations {
         return op;
     }
 
-     String printSpecifiedLine(String content,int limit){
+     String getLine(String content,int limit){
         StringBuilder result = new StringBuilder();
         String[] temp = content.split("\n");
          if(temp.length < limit)

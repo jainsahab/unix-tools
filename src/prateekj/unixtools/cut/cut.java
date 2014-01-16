@@ -10,6 +10,6 @@ public class Cut {
             return;
         }
         String content = new FileOperations().readFile(op.fileName);
-        System.out.println(operations.printSpecifiedFields(content, op));
+        System.out.println(operations.getFields(content, op));
     }
 }

@@ -25,7 +25,7 @@ public class OperationsTest {
 
     @Test
     public void testCountLine() throws Exception {
-        int expected = 2;
+        int expected = 1;
         int actual;
         String temp = "My Name is Prateek Jain\n Hello, ik's mike testing";
 
@@ -55,6 +55,31 @@ public class OperationsTest {
 
         Operations op = new Operations();
         actual = op.countCharacters(temp);
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void testCountCharacters_with_new_line() throws Exception {
+        int expected = 16 ;
+        int actual;
+        String temp = "My Name\nPrateek";
+
+        Operations op = new Operations();
+        actual = op.countCharacters(temp);
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void test_to_count_occurence_of_comma() throws Exception {
+        String  input = "a,b,c,d,e";
+        int expected = 4 ;
+        int actual;
+        String temp = "My Name";
+
+        Operations op = new Operations();
+        actual = op.countOccurrencesOf(input,',');
 
         assertEquals(expected,actual);
     }

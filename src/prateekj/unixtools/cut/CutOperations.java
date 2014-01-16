@@ -5,33 +5,40 @@ import java.util.ArrayList;
 
 class OperationInfo {
     ArrayList<Integer> fieldNos = new ArrayList<Integer>();
-    String delimiter = " ";
+    String delimiter = "\t";
     String fileName;
 }
 
 public class CutOperations {
     OperationInfo getInfo(String[] temp){
         OperationInfo op = new OperationInfo();
-            for (String s : temp) {
-                if(s.startsWith("-f")){
-                    String[] fields = s.substring(2).split(",");
-                    for (String field : fields) {
-                        op.fieldNos.add(Integer.parseInt(field));
-                    }
-                }
-
-                else if(s.startsWith("-d")){
-                    op.delimiter = s.substring(2);
-                    if(op.delimiter.equals(""))
-                        op.delimiter = " ";
-                }
-                else
-                    op.fileName = s;
-            }
-
+        for (String s : temp) {
+            if(s.startsWith("-f"))
+                op.fieldNos = getFields( s);
+            else if(s.startsWith("-d"))
+                op.delimiter = getDelimiter(s);
+            else
+                op.fileName = s;
+        }
             return op;
     }
-    String printSpecifiedFields(String content, OperationInfo op){
+
+    private String getDelimiter(String s) {
+        OperationInfo op = new OperationInfo();
+        op.delimiter = s.substring(2);
+        return op.delimiter;
+    }
+
+    private ArrayList getFields( String s) {
+        OperationInfo op = new OperationInfo();
+        String[] fields = s.substring(2).split(",");
+        for (String field : fields) {
+            op.fieldNos.add(Integer.parseInt(field));
+        }
+        return op.fieldNos;
+    }
+
+    String getFields(String content, OperationInfo op){
         String[] lines = content.split("\n");
         StringBuilder result = new StringBuilder();
         for (String line : lines) {
@@ -43,6 +50,6 @@ public class CutOperations {
             }
             result.append("\n");
         }
-        return result.toString();
+        return result.toString().substring(0,result.length()-1);
     }
 }
