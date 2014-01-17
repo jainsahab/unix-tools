@@ -3,7 +3,7 @@ package prateekj.unixtools.tail;
 import prateekj.fs.FileOperations;
 
 
-public class Tail1 {
+public class Tail {
     public static void main(String[] args) {
         TailOperation op = new TailOperation();
         FileOperations fs = new FileOperations();
