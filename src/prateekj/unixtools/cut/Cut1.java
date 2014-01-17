@@ -1,7 +1,8 @@
 package prateekj.unixtools.cut;
 
-import prateekj.fs.*;
-public class Cut {
+import prateekj.fs.FileOperations;
+
+public class Cut1 {
     public static void main(String[] args) {
         CutOperations operations = new CutOperations();
         OperationInfo op = operations.getInfo(args);

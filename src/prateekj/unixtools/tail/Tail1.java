@@ -1,9 +1,9 @@
 package prateekj.unixtools.tail;
-import prateekj.fs.*;
+
+import prateekj.fs.FileOperations;
 
 
-
-public class Tail {
+public class Tail1 {
     public static void main(String[] args) {
         TailOperation op = new TailOperation();
         FileOperations fs = new FileOperations();

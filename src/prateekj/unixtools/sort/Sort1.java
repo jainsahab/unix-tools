@@ -1,7 +1,8 @@
 package prateekj.unixtools.sort;
 
-import prateekj.fs.*;
-public class Sort {
+import prateekj.fs.FileOperations;
+
+public class Sort1 {
     public static void main(String[] args) {
         SortOperation so = new SortOperation();
         Options input = so.getOptions(args);
