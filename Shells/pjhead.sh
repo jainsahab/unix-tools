@@ -1,1 +1,1 @@
-java -cp $UNIX_HOME/bin/unix-tools.jar prateekj.unixtools.head.Head $@
+java -cp $UNIX_HOME/lib/unix-tools.jar prateekj.unixtools.head.Head $@
