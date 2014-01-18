@@ -1,1 +1,1 @@
-java -cp $UNIX_HOME/unix-tools.jar prateekj.unixtools.reduceSpaces.ReduceSpace $@
+java -cp $UNIX_HOME/bin/unix-tools.jar prateekj.unixtools.reduceSpaces.ReduceSpace $@
