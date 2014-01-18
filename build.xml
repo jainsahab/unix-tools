@@ -6,16 +6,17 @@
     <target name="compile">
         <mkdir dir="build"/>
         <mkdir dir="build/classes"/>
-        <javac srcdir="src" destdir="build/classes" includeantruntime="false"/>
+        <mkdir dir="build/classes/src"/>
+        <javac srcdir="src" destdir="build/classes/src" includeantruntime="false"/>
     </target>
 
     <target name="compileTest" depends="compile">
-        <mkdir dir="build/testClasses"/>
-        <javac srcdir="Test" destdir="build/testClasses" classpath="build/classes;dependencies/junit-4.10.jar" includeantruntime="false"/>
+        <mkdir dir="build/classes/test"/>
+        <javac srcdir="Test" destdir="build/classes/test" classpath="build/classes/src;dependencies/junit-4.10.jar" includeantruntime="false"/>
     </target>
 
     <target name="test" depends="compileTest">
-        <java classname="org.junit.runner.JUnitCore" classpath="build/classes;build/testClasses;dependencies/junit-4.10.jar">
+        <java classname="org.junit.runner.JUnitCore" classpath="build/classes/src;build/classes/test;dependencies/junit-4.10.jar">
             <arg value="prateekj.unixtools.cut.CutOperationsTest"/>
             <arg value="prateekj.unixtools.head.OperationsOfHeadTest"/>
             <arg value="prateekj.unixtools.reduceSpaces.ReduceSpaceTest"/>
@@ -28,27 +29,24 @@
 
 
 
-    <target name="createJar" depends="compile">
-        <mkdir dir="unix-tools"/>
-        <mkdir dir="unix-tools/lib"/>
-        <jar destfile="unix-tools/lib/unix-tools.jar" basedir="classes"/>
+    <target name="createJar" depends="test">
+        <mkdir dir="build/dist"/>
+        <mkdir dir="build/dist/lib"/>
+        <jar destfile="build/dist/lib/unix-tools.jar" basedir="build/classes/src"/>
     </target>
 
     <target name="createDocumentation">
-        <mkdir dir="unix-tools"/>
-        <mkdir dir="unix-tools/docs"/>
+        <mkdir dir="build/dist/docs"/>
         <javadoc packageNames="prateekj.unixtools.*"
-                 sourcepath="src" destdir="unix-tools/docs" windowtitle="UNIX TOOLS API"/>
+                 sourcepath="src" destdir="build/dist/docs" windowtitle="UNIX TOOLS API"/>
     </target>
 
     <target name="createZip" depends="createJar,createDocumentation">
-        <mkdir dir="unix-tools/bin"/>
-        <copy todir="unix-tools/bin">
+        <mkdir dir="build/dist/bin"/>
+        <copy todir="build/dist/bin">
             <fileset dir="Shells" excludes="Shells/*.sh"/>
         </copy>
-        <copy todir="unix-tools" file="README.md"/>
-        <zip destfile="unix-tools.zip" basedir="unix-tools"/>
-        <delete dir="classes"/>
-        <delete dir="unix-tools"/>
+        <copy todir="build/dist" file="README.md"/>
+        <zip destfile="unix-tools.zip" basedir="build/dist"/>
     </target>
 </project>

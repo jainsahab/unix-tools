@@ -1,1 +1,1 @@
-java -cp $UNIX_HOME/UnixTools.jar prateekj.unixtools.uniq.Uniq $@
+java -cp $UNIX_HOME/unix-tools.jar prateekj.unixtools.uniq.Uniq $@

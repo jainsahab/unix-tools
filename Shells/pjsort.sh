@@ -1,1 +1,1 @@
-java -cp $UNIX_HOME/UnixTools.jar prateekj.unixtools.sort.Sort $@
+java -cp $UNIX_HOME/unix-tools.jar prateekj.unixtools.sort.Sort $@
