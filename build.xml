@@ -1,11 +1,29 @@
-<project default="createZip">
-    <target name="delete">
-            <delete dir="classes"/>
+<project >
+    <target name="clean">
+            <delete dir="build"/>
     </target>
 
     <target name="compile">
-        <mkdir dir="classes"/>
-        <javac srcdir="src" destdir="classes" includeantruntime="false"/>
+        <mkdir dir="build"/>
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes" includeantruntime="false"/>
+    </target>
+
+    <target name="compileTest" depends="compile">
+        <mkdir dir="build/testClasses"/>
+        <javac srcdir="Test" destdir="build/testClasses" classpath="build/classes;dependencies/junit-4.10.jar" includeantruntime="false"/>
+    </target>
+
+    <target name="test" depends="compileTest">
+        <java classname="org.junit.runner.JUnitCore" classpath="build/classes;build/testClasses;dependencies/junit-4.10.jar">
+            <arg value="prateekj.unixtools.cut.CutOperationsTest"/>
+            <arg value="prateekj.unixtools.head.OperationsOfHeadTest"/>
+            <arg value="prateekj.unixtools.reduceSpaces.ReduceSpaceTest"/>
+            <arg value="prateekj.unixtools.sort.SortOperationTest"/>
+            <arg value="prateekj.unixtools.tail.TailOperationTest"/>
+            <arg value="prateekj.unixtools.uniq.UniqOperationsTest"/>
+            <arg value="prateekj.unixtools.wc.OperationsTest"/>
+        </java>
     </target>
 
 

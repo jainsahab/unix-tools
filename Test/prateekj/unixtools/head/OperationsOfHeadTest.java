@@ -34,4 +34,39 @@ public class OperationsOfHeadTest {
         assertEquals(actual.fileName, expected.fileName);
         assertEquals(expected.lineNo,actual.lineNo);
     }
+
+    @Test
+    public void test_should_return_2_line() throws Exception {
+        String input = "My\nName\nis\nPrateek\nJain";
+        String expected = "My\nName";
+        OperationsOfHead op = new OperationsOfHead();
+
+        String actual = op.getLine(input, 2);
+
+        assertEquals(actual, expected);
+    }
+
+    @Test
+    public void test_should_return_5_line_when_requesting_for_10() throws Exception {
+        String input = "My\nName\nis\nPrateek\nJain";
+        String expected = "My\nName\nis\nPrateek\nJain";
+
+        OperationsOfHead op = new OperationsOfHead();
+
+        String actual = op.getLine(input, 10);
+
+        assertEquals(actual, expected);
+    }
+
+    @Test
+    public void test_should_return_nothing() throws Exception {
+        String input = "";
+        String expected = "";
+
+        OperationsOfHead op = new OperationsOfHead();
+
+        String actual = op.getLine(input, 10);
+
+        assertEquals(actual, expected);
+    }
 }
