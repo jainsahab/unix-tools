@@ -3,4 +3,6 @@
 *.class
 out/
 unix-tools.zip
-
+temp/
+build/
+*.ser

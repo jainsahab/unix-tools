@@ -102,4 +102,20 @@ public class CutOperationsTest {
 
         assertEquals(expected,actual);
     }
+
+
+    @Test
+    public void cut_by_comma_by_field_which_is_not_present() throws Exception {
+        String[] input = {"temp.txt","-f4","-d,"};
+        String inputString = "One,Two,Seven\n"+
+                "Three,Four,Eight\n"+
+                "Five,Six,Nine";
+        String expected = " \n \n ";
+        CutOperations c = new CutOperations();
+
+        OperationInfo op = c.getInfo(input);
+        String actual = c.getFields(inputString, op);
+
+        assertEquals(expected,actual);
+    }
 }
