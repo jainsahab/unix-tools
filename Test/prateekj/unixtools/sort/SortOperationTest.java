@@ -36,5 +36,31 @@ public class SortOperationTest {
         assertEquals(expected.reverse,actual.reverse);
     }
 
+    @Test
+    public void sort_D_B_A_C_should_give_A_B_C_D() throws Exception {
+        String input = "D\nB\nA\nC";
+        String expected = "A\nB\nC\nD";
+        Options options = new Options();
+        options.reverse = false;
+        SortOperation so = new SortOperation();
+
+        String actual  = so.sortContent(input,options);
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void sort_D_B_A_C_should_give_D_C_B_A() throws Exception {
+        String input = "D\nB\nA\nC";
+        String expected = "D\nC\nB\nA";
+        Options options = new Options();
+        options.reverse = true;
+        SortOperation so = new SortOperation();
+
+        String actual  = so.sortContent(input,options);
+
+        assertEquals(expected,actual);
+    }
+
 
 }

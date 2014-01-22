@@ -23,7 +23,7 @@ public class Operations{
                 options.lines = true;
             if(i.equalsIgnoreCase("-w"))
                 options.words = true;
-            if(!i.substring(0, 1).startsWith("-"))
+            if(!i.startsWith("-"))
                 options.filename = i;
         }
         return options;

@@ -1,18 +1,27 @@
 package prateekj.unixtools.head;
+import prateekj.fs.*;
+
+import java.io.File;
 
 class Operations {
     int lineNo;
     String fileName;
 }
  class OperationsOfHead {
-      Operations getOptions(String[] temp){
-        Operations op = new Operations();
-        if(temp.length == 1){
-            op.fileName = temp[0];
+     String filePath = System.getenv("UNIX_HOME") + "/properties.config";
+     FileOperations fs = new FileOperations();
+     File f = new File(filePath);
+      Operations getOptions(String[] args){
+      Operations op = new Operations();
+        if(args.length == 1){
+            op.fileName = args[0];
+            if(f.exists())
+                op.lineNo = Integer.parseInt(fs.readFile(filePath).split(":")[1]);
+            else
             op.lineNo = 10;
             return op;
         }
-        for(String a: temp){
+        for(String a: args){
             if(a.startsWith("-"))
                 op.lineNo = Integer.parseInt(a.substring(a.indexOf('n')+1));
             else

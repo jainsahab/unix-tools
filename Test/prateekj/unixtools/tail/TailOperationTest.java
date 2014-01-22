@@ -67,4 +67,18 @@ public class TailOperationTest {
         String actual = op.getLines(temp,5);
         assertEquals(actual,expected);
     }
+
+    @Test
+    public void test_should_get_all_five_lines_which_are_smaller_than_as_requested() throws Exception {
+        String temp = "A\nB\nC\nD\nE";
+        String expected = "A\n" +
+                "B\n" +
+                "C\n" +
+                "D\n" +
+                "E";
+        TailOperation op = new TailOperation();
+
+        String actual = op.getLines(temp,10);
+        assertEquals(actual,expected);
+    }
 }

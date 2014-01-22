@@ -26,9 +26,10 @@ public class FileOperations {
             while ((line = reader.readLine()) != null) {
                 data.append(line).append("\n");
             }
-        }
-        catch(Exception e){
-            System.out.println("something went wrong"+e);
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return data.substring(0,data.length()-1);
     }

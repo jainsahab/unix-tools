@@ -24,6 +24,42 @@ public class OperationsTest {
     }
 
     @Test
+    public void testGetOptions_should_return_all_the_fields_as_true() throws Exception {
+        String[] inputs = {"one.txt"};
+        Options actual;
+        Options expected = new Options();
+
+        Operations op = new Operations();
+        expected.chars = true;
+        expected.lines = true;
+        expected.words = true;
+        expected.filename = "one.txt";
+        actual = op.getOptions(inputs);
+        assertEquals(actual.filename,expected.filename);
+        assertEquals(actual.chars,expected.chars);
+        assertEquals(actual.lines,expected.lines);
+        assertEquals(actual.words,expected.words);
+    }
+
+    @Test
+    public void testGetOptions_should_return_only_words_as_true() throws Exception {
+        String[] inputs = {"-w", "one.txt"};
+        Options actual;
+        Options expected = new Options();
+
+        Operations op = new Operations();
+        expected.chars = false;
+        expected.lines = false;
+        expected.words = true;
+        expected.filename = "one.txt";
+        actual = op.getOptions(inputs);
+        assertEquals(actual.filename,expected.filename);
+        assertEquals(actual.chars,expected.chars);
+        assertEquals(actual.lines,expected.lines);
+        assertEquals(actual.words,expected.words);
+    }
+
+    @Test
     public void testCountLine() throws Exception {
         int expected = 1;
         int actual;

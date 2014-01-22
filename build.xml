@@ -1,7 +1,7 @@
-<project >
+<project default="dist">
 
     <property name="src.dir" value="D:/projects/unix-tools/src"/>
-    <property name="cobertura.dir" value="./cobertura-2.0.1-bin/cobertura-2.0.1" />
+    <property name="cobertura.dir" value="./dependencies/cobertura-2.0.1" />
 
 
     <path id="cobertura.classpath">
@@ -18,12 +18,12 @@
         <mkdir dir="build/codeCoverage"/>
         <mkdir dir="build/codeCoverage/instrumented" />
         <mkdir dir="build/codeCoverage/reports"/>
-        <mkdir dir="build/codeCoverage/reports/junit-xml" />
-        <mkdir dir="build/codeCoverage/reports/junit-html" />
         <mkdir dir="build/codeCoverage/coverage"/>
-        <mkdir dir="build/codeCoverage/coverage/cobertura-xml" />
-        <mkdir dir="build/codeCoverage/coverage/cobertura-summary-xml" />
-        <mkdir dir="build/codeCoverage/coverage/cobertura-html" />
+        <mkdir dir="build/codeCoverage/reports/xml" />
+        <mkdir dir="build/codeCoverage/reports/html" />
+        <mkdir dir="build/codeCoverage/coverage/xml" />
+        <mkdir dir="build/codeCoverage/coverage/summary-xml" />
+        <mkdir dir="build/codeCoverage/coverage/html" />
     </target>
 
     <target name="clean">
@@ -71,19 +71,19 @@
             <classpath refid="cobertura.classpath" />
 
             <formatter type="xml" />
-            <test name="${testcase}" todir="build/codeCoverage/reports/junit-xml" if="testcase" />
-            <batchtest todir="build/codeCoverage/reports/junit-xml" unless="testcase">
+            <test name="${testcase}" todir="build/codeCoverage/reports/xml" if="testcase" />
+            <batchtest todir="build/codeCoverage/reports/xml" unless="testcase">
                 <fileset dir="Test">
                     <include name="**/*Test.java" />
                 </fileset>
             </batchtest>
         </junit>
 
-        <junitreport todir="build/codeCoverage/reports/junit-xml">
-            <fileset dir="build/codeCoverage/reports/junit-xml">
+        <junitreport todir="build/codeCoverage/reports/xml">
+            <fileset dir="build/codeCoverage/reports/xml">
                 <include name="TEST-*.xml" />
             </fileset>
-            <report format="frames" todir="build/codeCoverage/reports/junit-html" />
+            <report format="frames" todir="build/codeCoverage/reports/html" />
         </junitreport>
 
     </target>
@@ -94,15 +94,15 @@
 
 
     <target name="coverage-report">
-        <cobertura-report srcdir="src" destdir="build/codeCoverage/coverage/cobertura-xml" format="xml" />
+        <cobertura-report srcdir="src" destdir="build/codeCoverage/coverage/xml" format="xml" />
     </target>
 
     <target name="summary-coverage-report">
-        <cobertura-report srcdir="src" destdir="build/codeCoverage/coverage/cobertura-summary-xml" format="summaryXml" />
+        <cobertura-report srcdir="src" destdir="build/codeCoverage/coverage/summary-xml" format="summaryXml" />
     </target>
 
     <target name="alternate-coverage-report">
-        <cobertura-report destdir="build/codeCoverage/coverage/cobertura-html">
+        <cobertura-report destdir="build/codeCoverage/coverage/html">
             <fileset dir="src">
                 <include name="**/*.java"/>
             </fileset>
@@ -117,6 +117,14 @@
         <jar destfile="build/dist/lib/unix-tools.jar" basedir="build/classes/src"/>
     </target>
 
+    <target name="copyShellsAndRead">
+        <mkdir dir="build/dist/bin"/>
+        <copy todir="build/dist/bin">
+            <fileset dir="Shells" excludes="Shells/*.sh"/>
+        </copy>
+        <copy todir="build/dist" file="README.md"/>
+        <copy todir="build/dist" file="properties.config"/>
+    </target>
 
     <target name="createDocumentation">
         <mkdir dir="build/dist/docs"/>
@@ -124,12 +132,7 @@
                  sourcepath="src" destdir="build/dist/docs" windowtitle="UNIX TOOLS API"/>
     </target>
 
-    <target name="createZip" depends="createJar">
-        <mkdir dir="build/dist/bin"/>
-        <copy todir="build/dist/bin">
-            <fileset dir="Shells" excludes="Shells/*.sh"/>
-        </copy>
-        <copy todir="build/dist" file="README.md"/>
+    <target name="dist" depends="createJar,createDocumentation,copyShellsAndRead">
         <zip destfile="unix-tools.zip" basedir="build/dist"/>
     </target>
     <target name="coverage" depends="compile,compileTest,instrument,test,coverage-report,summary-coverage-report,alternate-coverage-report"/>
